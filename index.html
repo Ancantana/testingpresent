@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'AUTHENTIC Sans.otf', sans-serif;
+      height: 100vh; /* Full viewport height */
+      width: 100vw; /* Full viewport width */
+      overflow: hidden;
+      background-color: #F2F2F2;
+    }
+
+    #container {
+      display: flex;
+      width: 100vw; /* Full viewport width */
+      height: 100vh; /* Full viewport height */
+    }
+
+    #video-container, #write-container {
+      flex: 1; /* Each takes up half of the container's width */
+      height: 100vh; /* Full viewport height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #captureVideo {
+      width: auto; /* Adjust width automatically */
+      height: 100%; /* Full height of its container */
+      object-fit: contain; /* Maintain aspect ratio without stretching */
+    }
+
+    textarea {
+      width: 80%; /* Slightly less than its container for padding */
+      height: 80%; /* Slightly less than its container for padding */
+      border: none;
+      resize: none;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="video-container">
+      <video id="captureVideo" autoplay>
+        <source src="your-video-file.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div id="write-container">
+      <textarea id="textInput"></textarea>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
+
